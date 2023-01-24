@@ -36,11 +36,11 @@
 			vG = vE - vKostGesamt;	
 			// Bei Gewinn unter 0, haben wir eine sogenannte Verlustzone, bitte rot markieren...
 			if (vG<0) {
-				vAusgabe = vAusgabe + "<tr><th>" + vMenge + "</th><th>"+ vKostGesamt +" €" +"</th><th>"+ vE + " €" +"</td><th style= color:Red>"+ vG +" €" +"</th><th>" + "Verlustzone" + "</th></tr>";
+				vAusgabe = vAusgabe + "<tr><th>" + vMenge + "</th><th>"+ vKostGesamt.toFixed(2) +" €" +"</th><th>"+ vE.toFixed(2) + " €" +"</td><th style= color:Red>"+ vG.toFixed(2) +" €" +"</th><th>" + "Verlustzone" + "</th></tr>";
 			}
 			// Bei Gewinn größer 0, haben wir einen Gewinn...
 			else {
-				vAusgabe = vAusgabe + "<tr><th>" + vMenge + "</th><th>"+ vKostGesamt +" €" +"</th><th>"+ vE +" €" +"</td><th style= color:Green>"+ vG +" €" +"</th><th>" + "Gewinnzone" + "</th></tr>";
+				vAusgabe = vAusgabe + "<tr><th>" + vMenge + "</th><th>"+ vKostGesamt.toFixed(2) +" €" +"</th><th>"+ vE.toFixed(2) +" €" +"</td><th style= color:Green>"+ vG.toFixed(2) +" €" +"</th><th>" + "Gewinnzone" + "</th></tr>";
 			}	
 			//Hochzählen in 1000er Schritten, damit die Schleife terminiert...
 			vMenge = vMenge + 1000;
